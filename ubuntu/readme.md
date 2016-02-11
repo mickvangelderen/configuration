@@ -1,0 +1,17 @@
+# Install
+
+The install script adds the bin folders and bash scripts.
+
+# Shortcuts
+
+## Keyboard > Shortcuts > Launchers > Key to show the HUD
+
+Disable left alt window menu hotkey so that ALT+D in browser doens't annoy me. 
+
+# Terminal
+
+## Terminal > Profiles > Profile Preferences > Colors
+
+White on Black
+Transparent background 0.3
+Tango color scheme
