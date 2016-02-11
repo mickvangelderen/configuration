@@ -1,0 +1,12 @@
+{
+	"installed_packages":
+	[
+		"Babel",
+		"MarkdownEditing",
+		"Oceanic Next Color Scheme",
+		"Package Control",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-json"
+	]
+}

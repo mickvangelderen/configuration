@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+device="Dell Dell USB Optical Mouse"
+resolution_percent="211" # Greater than 100, use constant deceleration otherwise with profile -1. 
+
+xinput set-prop "$device" "Device Accel Profile" 4 # Simple profile with threshold 0 allows constant scaling up
+xinput set-ptr-feedback "$device" 0 "$resolution_percent" 100 # Set threshold to 0 and acceleration to $resolution_percent/100

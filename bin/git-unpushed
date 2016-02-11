@@ -1,0 +1,9 @@
+#!/bin/bash
+
+find . -type d -maxdepth 3 -print0 | while read -d $'\0' dir; do (
+	cd "$dir" && 
+	[ -d .git ] && 
+	text=`git cherry -v` &&
+	[ ! -z "$text" ] &&
+	echo "`pwd` $text"
+) done
