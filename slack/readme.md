@@ -1,1 +1,1 @@
-(Download slack)[https://slack.com/downloads]
+[Download Slack](https://slack.com/downloads)

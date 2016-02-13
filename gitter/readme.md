@@ -1,1 +1,1 @@
-(Download gitter)[https://gitter.im/apps]
+[Download Gitter](https://gitter.im/apps)
