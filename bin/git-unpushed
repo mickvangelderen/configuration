@@ -1,9 +1,19 @@
 #!/bin/bash
 
-find . -type d -maxdepth 3 -print0 | while read -d $'\0' dir; do (
-	cd "$dir" && 
-	[ -d .git ] && 
-	text=`git cherry -v` &&
-	[ ! -z "$text" ] &&
-	echo "`pwd` $text"
+find . -maxdepth 1 -type d -print0 | while read -d $'\0' dir; do (
+	cd "$dir"
+	if ! STATUS=`git status --porcelain 2>/dev/null`; then
+		echo -e "$PWD Is not a git directory."
+		continue
+	fi
+	if [ -n "$STATUS" ]; then
+		echo -e "$PWD Has uncommitted changes."
+	fi
+	if ! CHERRY=`git cherry 2>&1`; then
+		echo -e "$PWD Failed to run git cherry:\n$CHERRY"
+		continue
+	fi
+	if [ -n "$CHERRY" ]; then
+		echo -e "$PWD Has unpushed commits."
+	fi
 ) done
