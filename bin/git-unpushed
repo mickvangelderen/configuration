@@ -1,6 +1,6 @@
 #!/bin/bash
 
-find . -maxdepth 1 -type d -print0 | while read -d $'\0' dir; do (
+find * -maxdepth 0 -type d -print0 | while read -d $'\0' dir; do (
 	cd "$dir"
 	if ! STATUS=`git status --porcelain 2>/dev/null`; then
 		echo -e "$PWD Is not a git directory."
