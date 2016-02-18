@@ -15,3 +15,7 @@ Disable left alt window menu hotkey so that ALT+D in browser doens't annoy me.
 White on Black
 Transparent background 0.3
 Tango color scheme
+
+# Updates
+
+https://help.ubuntu.com/lts/serverguide/automatic-updates.html
