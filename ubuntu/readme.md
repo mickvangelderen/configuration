@@ -1,6 +1,7 @@
 # Install
 
 The install script adds the bin folders and bash scripts.
+After that you can run git/configure.sh.
 
 # Shortcuts
 
