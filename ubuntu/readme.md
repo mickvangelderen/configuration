@@ -1,13 +1,8 @@
-# Install
-
-The install script adds the bin folders and bash scripts.
-After that you can run git/configure.sh.
-
 # Shortcuts
 
 ## Keyboard > Shortcuts > Launchers > Key to show the HUD
 
-Disable left alt window menu hotkey so that ALT+D in browser doens't annoy me. 
+Disable left alt window menu hotkey so that ALT+D in browser doens't annoy me.
 
 # Terminal
 

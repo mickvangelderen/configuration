@@ -1,14 +1,15 @@
-# Install
+# Configuration
 
-The install script adds the bin folders and bash scripts. I recommend installing (Git for Windows)[https://git-for-windows.github.io/] and (Console Z)[https://github.com/cbucher/console] to get a working bash environment in a nice looking terminal. 
+Some windows configuration things.
 
-# Registry
+## Disable mouse acceleration
 
-## mouse-fixed.reg
+Merge [mouse-fixed.reg](mouse-fixed.reg) with regedit.
 
-Disables mouse acceleration in Windows.
+## Disable the lock screen
 
-## no-lock-screen.reg
+Merge [no-lock-screen.reg](no-lock-screen.reg) with regedit.
 
-Disables lock screen on Windows 10.
+## Download Ubuntu font
 
+Download the [Ubuntu Font Family](http://font.ubuntu.com/), extract the fonts. Open your fonts folder and drag the files in.
