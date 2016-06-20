@@ -1,5 +1,6 @@
-; Shoutout to https://github.com/pmb6tz/windows-desktop-switcher for showing me how to do this.
+; Shoutout to https://github.com/pmb6tz/windows-desktop-switcher for this desktop switching technique.
 
+; Ensure only one virtual desktop switch is running at a time.
 activateVirtualDesktop(target_desktop_index)
 {
     static locked := false
@@ -19,6 +20,7 @@ activateVirtualDesktop(target_desktop_index)
     }
 }
 
+; Switch to a specific desktop.
 activateVirtualDesktopConcurrent(target_desktop_index)
 {
     ; OutputDebug, attempting to activate Virtual Desktop %target_desktop_index%.
@@ -37,17 +39,26 @@ activateVirtualDesktopConcurrent(target_desktop_index)
         current_session := A_LoopRegName
     }
 
-    ; Read the current desktop identifier and compute its length.
-    RegRead, current_desktop_id, HKEY_CURRENT_USER, SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\%current_session%\VirtualDesktops, CurrentVirtualDesktop
-    ; OutputDebug, current_desktop_id: %current_desktop_id%
-    desktop_id_length := Strlen(current_desktop_id)
-    ; OutputDebug, desktop_id_length: %desktop_id_length%
-
     ; Read the concatenated identifiers of all desktops and compute its length.
     RegRead, desktop_id_list, HKEY_CURRENT_USER, SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VirtualDesktops, VirtualDesktopIDs
     ; OutputDebug, desktop_id_list: %desktop_id_list%
     desktop_id_list_length := Strlen(desktop_id_list)
     ; OutputDebug, desktop_id_list_length: %desktop_id_list_length%
+
+    try
+    {
+        ; Read the current desktop identifier and compute its length.
+        RegRead, current_desktop_id, HKEY_CURRENT_USER, SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\%current_session%\VirtualDesktops, CurrentVirtualDesktop
+        ; OutputDebug, current_desktop_id: %current_desktop_id%
+        desktop_id_length := Strlen(current_desktop_id)
+        ; OutputDebug, desktop_id_length: %desktop_id_length%
+    }
+    catch error
+    {
+        ; Sometimes the curring desktop identifier is not yet set in the registry. Assume its length is 32.
+        desktop_id_length := 16
+        current_desktop_id := SubStr(desktop_id_list, 1, desktop_id_length)
+    }
 
     ; Compute the number of desktops.
     desktop_count := Floor(desktop_id_list_length/desktop_id_length)
