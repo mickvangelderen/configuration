@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-devices=$(xinput list | grep Mizar | grep pointer | sed 's/.*id=\([0-9]\+\).*/\1/')
-scale="1"
-
-while read device; do
-  xinput set-prop "$device" "Device Accel Profile" -1 # Disabled
-  xinput set-prop "$device" "Device Accel Constant Deceleration" "$scale"
-done <<< "$devices"
