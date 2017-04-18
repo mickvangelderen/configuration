@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 find * -maxdepth 0 -type d -print0 | while read -d $'\0' dir; do (
 	cd "$dir"
