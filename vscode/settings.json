@@ -1,0 +1,13 @@
+{
+    "explorer.openEditors.visible": 0,
+    "extensions.autoUpdate": true,
+    "flow.useNPMPackagedFlow": true,
+    "projectManager.git.baseFolders": [
+        "/home/mick/projects"
+    ],
+    "projectManager.git.ignoredFolders": [],
+    "projectManager.git.maxDepthRecursion": 1,
+    "vim.useSystemClipboard": true,
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.iconTheme": "vs-seti"
+}
