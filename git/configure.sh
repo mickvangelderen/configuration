@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SCRIPT_DIRECTORY="$(cd "$(dirname "$0")" && pwd)"
+SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 git config --global core.excludesfile "$SCRIPT_DIRECTORY/.gitignore"
 git config --global user.name "Mick van Gelderen"

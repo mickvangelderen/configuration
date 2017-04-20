@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SCRIPT_DIRECTORY="$(cd "$(dirname "$0")" && pwd)"
+SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 link_folder="$HOME/.atom"
 link_target_folder="$SCRIPT_DIRECTORY/.atom"
