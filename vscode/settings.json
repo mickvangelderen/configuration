@@ -1,13 +1,16 @@
 {
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.codeLens": false,
+    "editor.dragAndDrop": false,
+    "editor.quickSuggestionsDelay": 0,
     "explorer.openEditors.visible": 0,
-    "extensions.autoUpdate": true,
-    "flow.useNPMPackagedFlow": true,
     "projectManager.git.baseFolders": [
         "/home/mick/projects"
     ],
     "projectManager.git.ignoredFolders": [],
     "projectManager.git.maxDepthRecursion": 1,
+    "projectManager.projectsLocation": "/home/mick/projects",
+    "vim.disableAnnoyingNeovimMessage": true,
     "vim.useSystemClipboard": true,
-    "workbench.colorTheme": "Solarized Light",
-    "workbench.iconTheme": "vs-seti"
+    "workbench.colorTheme": "Default Light+"
 }
