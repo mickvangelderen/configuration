@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source /usr/share/git/completion/git-prompt.sh
+
 function setPrompt {
 	local BLACK='\[\e[0;30m\]'
 	local BLACKBOLD='\[\e[1;30m\]'
