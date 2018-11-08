@@ -20,3 +20,6 @@ Section "InputClass"
 	Option "AccelSpeed" "0"
 EndSection
 END
+
+dconf write /org/gnome/desktop/peripherals/mouse/accel-profile "'flat'"
+
