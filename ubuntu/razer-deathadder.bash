@@ -1,17 +1,21 @@
-# Turns out there are multiple
-# "pointer:Razer Razer DeathAdder Elite"
-# so use the device id. Not cross pc.
+# Requires openrazer.
 
-xinput set-prop 11 "libinput Accel Speed" 0.0
+DRIVER_FOLDER="/sys/bus/hid/drivers/razermouse"
 
-# Using openrazer
+# Just do it for every connected mouse.
+while IFS= read -r -d '' path; do
+    echo "Found a mouse at ${path}".
 
-DRIVER_FOLDER="/sys/bus/hid/drivers/razermouse/0003:1532:005C.0002"
+    # Update poll rate.
+    old=$(cat "$path"/poll_rate)
+    echo -n 1000 > "$path"/poll_rate
+    new=$(cat "$path"/poll_rate)
+    echo "Poll rate changed from $old to $new."
 
-# pollrate 1000Hz
-echo -n "1000" > "${DRIVER_FOLDER}/poll_rate"
+    # Update DPI.
+    old=$(cat "$path"/dpi)
+    echo -n -e "\x05\x14" > "$path"/dpi
+    new=$(cat "$path"/dpi)
+    echo "DPI changed from $old to $new."
+done < <(find "${DRIVER_FOLDER}"/*/poll_rate -type f -printf "%h\0" | sort -z)
 
-# dpi 1300 in hex
-echo -n -e "\x05\x14" > "${DRIVER_FOLDER}/dpi"
-
-cat "${DRIVER_FOLDER}/dpi"
