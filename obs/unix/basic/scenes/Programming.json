@@ -4,7 +4,7 @@
         "deinterlace_field_order": 0,
         "deinterlace_mode": 0,
         "enabled": true,
-        "flags": 0,
+        "flags": 2,
         "hotkeys": {
             "libobs.mute": [],
             "libobs.push-to-mute": [],
@@ -24,7 +24,7 @@
         "push-to-talk": false,
         "push-to-talk-delay": 0,
         "settings": {
-            "device_id": "default"
+            "device_id": "alsa_input.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.analog-mono"
         },
         "sync": 0,
         "volume": 1.0
@@ -52,10 +52,10 @@
         "push-to-talk": false,
         "push-to-talk-delay": 0,
         "settings": {
-            "device_id": "default"
+            "device_id": "alsa_output.pci-0000_00_1f.3.analog-stereo.monitor"
         },
         "sync": 0,
-        "volume": 0.40000000596046448
+        "volume": 0.5
     },
     "current_program_scene": "Scene",
     "current_scene": "Scene",
@@ -114,6 +114,27 @@
             "deinterlace_mode": 0,
             "enabled": true,
             "flags": 0,
+            "hotkeys": {},
+            "id": "xshm_input",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Screen Capture (XSHM)",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {},
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Screen Capture (XSHM)": [],
@@ -164,27 +185,6 @@
                     }
                 ]
             },
-            "sync": 0,
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "xshm_input",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Screen Capture (XSHM)",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {},
             "sync": 0,
             "volume": 1.0
         }

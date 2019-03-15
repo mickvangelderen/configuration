@@ -1,5 +1,5 @@
 {
-    "bitrate": 2500,
+    "bitrate": 1500,
     "keyint_sec": 2,
     "max_bitrate": 6000,
     "rate_control": "VBR"
