@@ -1,0 +1,8 @@
+{
+    "settings": {
+        "key": "live_72161216_loaMCVNAj6QVCFNHtV3vfsdzynGj4G",
+        "server": "auto",
+        "service": "Twitch"
+    },
+    "type": "rtmp_common"
+}
