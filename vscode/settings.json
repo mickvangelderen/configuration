@@ -3,24 +3,9 @@
     "editor.codeLens": false,
     "editor.dragAndDrop": false,
     "editor.quickSuggestionsDelay": 0,
+    "editor.find.autoFindInSelection": true,
     "explorer.openEditors.visible": 0,
-    "projectManager.git.baseFolders": [
-        "/home/mick/projects"
-    ],
-    "projectManager.git.ignoredFolders": [],
-    "projectManager.git.maxDepthRecursion": 1,
-    "projectManager.projectsLocation": "/home/mick/projects",
-    "vim.disableAnnoyingNeovimMessage": true,
-    "vim.useSystemClipboard": true,
-    "workbench.colorTheme": "Default Light+",
-    "workbench.startupEditor": "newUntitledFile",
-    "rust.rustup": {
-        "toolchain": "nightly-x86_64-unknown-linux-gnu",
-        "nightlyToolchain": "nightly-x86_64-unknown-linux-gnu"
-    },
-    "rust.mode": "rls",
-    "rust.rls": {
-        "useRustfmt": true
-    },
-    "window.zoomLevel": 1
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Default Light+"
 }
