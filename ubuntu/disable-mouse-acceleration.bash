@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo --validate || exit
+
 # If the flat accelprofile is not supported we can use this.
 # cat <<END >> /usr/share/X11/xorg.conf.d/50-mouse-acceleration.conf
 # Section "InputClass"
@@ -11,7 +13,7 @@
 # EndSection
 # END
 
-cat <<END >> /usr/share/X11/xorg.conf.d/50-mouse-acceleration.conf
+sudo tee /usr/share/X11/xorg.conf.d/50-mouse-acceleration.conf >/dev/null <<END
 Section "InputClass"
 	Identifier "Mick Mouse"
 	Driver "libinput"
@@ -21,5 +23,5 @@ Section "InputClass"
 EndSection
 END
 
-dconf write /org/gnome/desktop/peripherals/mouse/accel-profile "'flat'"
+sudo dconf write /org/gnome/desktop/peripherals/mouse/accel-profile "'flat'"
 
