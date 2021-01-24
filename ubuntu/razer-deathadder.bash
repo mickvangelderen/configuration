@@ -14,7 +14,7 @@ while IFS= read -r -d '' path; do
 
     # Update DPI.
     old=$(cat "$path"/dpi)
-    echo -n -e "\x05\xDC" > "$path"/dpi
+    echo -n -e "\x05\x78" > "$path"/dpi
     new=$(cat "$path"/dpi)
     echo "DPI changed from $old to $new."
 done < <(find "${DRIVER_FOLDER}"/*/poll_rate -type f -printf "%h\0" | sort -z)
