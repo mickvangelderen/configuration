@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-git config --global core.excludesfile "$SCRIPT_DIRECTORY/.gitignore"
 git config --global user.name "Mick van Gelderen"
 git config --global user.email "mickvangelderen@gmail.com"
+
 git config --global core.editor "vim"
 
-mkdir --parents "$HOME/bin"
-ln --symbolic --relative "$SCRIPT_DIRECTORY/git-unpushed.bash" "$HOME/bin/git-unpushed"
+git config --global alias.pf "push --force-with-lease"
+git config --global alias.po "!git push --set-upstream origin \"\$(git branch --show-current)\""
+git config --global alias.ca "commit --amend --reuse-message"
+git config --global alias.rom "!git fetch && git rebase --interactive origin/master"

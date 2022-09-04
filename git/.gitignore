@@ -1,8 +1,0 @@
-*.sublime-project
-*.sublime-workspace
-npm-debug.log
-ignore/
-Thumbs.db
-.projectile
-
-
