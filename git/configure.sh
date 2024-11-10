@@ -2,10 +2,8 @@
 
 git config --global user.name "Mick van Gelderen"
 git config --global user.email "mickvangelderen@gmail.com"
-
 git config --global core.editor "vim"
-
-git config --global init.defaultBranch "master"
+git config --global init.defaultBranch "main"
 
 git config --global alias.default-branch '!sed -e '\''s/^.*\///'\'' < .git/refs/remotes/origin/HEAD'
 git config --global alias.p 'push'
