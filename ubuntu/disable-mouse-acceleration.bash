@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 sudo --validate || exit
 
@@ -13,15 +14,15 @@ sudo --validate || exit
 # EndSection
 # END
 
-sudo tee /usr/share/X11/xorg.conf.d/50-mouse-acceleration.conf >/dev/null <<END
+sudo tee /usr/share/X11/xorg.conf.d/50-mouse-acceleration.conf >/dev/null <<'END'
 Section "InputClass"
-	Identifier "Mick Mouse"
-	Driver "libinput"
-	MatchIsPointer "yes"
-	Option "AccelProfile" "flat"
-	Option "AccelSpeed" "0"
+    Identifier "Mick Mouse"
+    Driver "libinput"
+    MatchIsPointer "yes"
+    Option "AccelProfile" "flat"
+    Option "AccelSpeed" "0"
 EndSection
 END
 
-sudo dconf write /org/gnome/desktop/peripherals/mouse/accel-profile "'flat'"
-
+dconf write /org/gnome/desktop/peripherals/mouse/accel-profile "'flat'"
+dconf write /org/gnome/desktop/peripherals/mouse/speed "0"
