@@ -8,6 +8,13 @@ Do not include standard CI-covered verification steps in PR summaries, such as "
 
 Use `mick/branch-name` for new branches by default. If the work comes from an issue tracker, prefer fetching the expected branch name directly from the tracker when that functionality is available. Otherwise, if the tracker provides an expected branch name through some other readily available means, use that name. Do not spend extra time searching for tracker-specific branch conventions; if the expected name is not readily available, fall back to the `mick/branch-name` convention.
 
+## Commit signing
+
+Agents must create unsigned commits by passing `--no-gpg-sign` to `git commit`.
+Only the user can create signed commits because signing requires their
+interaction with the signing popup. Do not attempt a normally configured signed
+commit first.
+
 ## Regression tests for implementation defects
 
 When fixing a defect in behavior or logic owned by the repository, add a
