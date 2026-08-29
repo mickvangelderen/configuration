@@ -2,7 +2,7 @@
 
 ## Pull request summaries
 
-Do not include standard CI-covered verification steps in PR summaries, such as "run the test suite" or "verify the change builds." CI already covers those, and reviewers generally won't repeat them locally. Only list manual verification steps that CI can't cover, such as UI checks or behavior that needs a human to observe.
+Do not include standard CI-covered verification steps in PR summaries, such as "run the test suite" or "verify the change builds." CI already covers those, and reviewers generally won't repeat them locally. If there are manual verification steps that CI can't cover, such as UI checks or behavior that needs a human to observe, list them. 
 
 ## Branch naming
 
@@ -14,24 +14,6 @@ Agents must create unsigned commits by passing `--no-gpg-sign` to `git commit`.
 Only the user can create signed commits because signing requires their
 interaction with the signing popup. Do not attempt a normally configured signed
 commit first.
-
-## Regression tests for implementation defects
-
-When fixing a defect in behavior or logic owned by the repository, add a
-regression test before implementing the fix and confirm that it fails for the
-expected reason. A test written only after the fix may also pass against the
-defective implementation and therefore fail to protect against recurrence.
-
-This rule does not apply merely because work is described as an "issue" or
-"problem." Do not require a regression test for design changes, configuration
-or tuning changes, changes to intended behavior, documentation corrections, or
-correcting misuse of an external API.
-
-Do not add tests whose only assertion is that deliberately incorrect arguments
-to a third-party API fail or produce an incorrect result. When correcting
-third-party API usage, add a test only if it protects a meaningful,
-repository-owned invariant or observable behavior that could regress
-independently of that API mistake.
 
 ## Do not pretend to be human
 
