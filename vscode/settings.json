@@ -7,5 +7,21 @@
     "explorer.openEditors.visible": 0,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-    "workbench.colorTheme": "Default Light+"
+    "workbench.colorTheme": "Light+",
+    "python-envs.terminal.autoActivationType": "off",
+    "python.terminal.activateEnvironment": false,
+    "workbench.browser.openLocalhostLinks": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "files.watcherExclude": {
+        "*/.venv/**": true,
+        "*/node_modules/**": true
+    },
+    "extensions.ignoreRecommendations": true,
+    "workbench.editor.empty.hint": "hidden",
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "markdown.copyFiles.overwriteBehavior": "overwrite",
+    "explorer.incrementalNaming": "disabled",
+    "git.ignoreLimitWarning": true
 }
