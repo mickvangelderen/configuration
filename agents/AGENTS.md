@@ -4,6 +4,16 @@ Canonical source: `~/configuration/agents/AGENTS.md`. If these instructions
 are copied or injected into another context, use that path to find and update
 the source version.
 
+## Pull request completion
+
+Treat a request to open or prepare a pull request as including monitoring its
+CI results and addressing failures. Fix small, straightforward issues
+automatically, commit and push the fixes, and monitor the resulting CI run.
+Report major issues or changes requiring significant tradeoffs for user
+feedback before proceeding. If CI cannot be monitored to completion, state
+what remains pending. Respect any explicit limits the user places on testing
+or follow-up work.
+
 ## Pull request summaries
 
 Do not include standard CI-covered verification steps in PR summaries, such as "run the test suite" or "verify the change builds." CI already covers those, and reviewers generally won't repeat them locally. If there are manual verification steps that CI can't cover, such as UI checks or behavior that needs a human to observe, list them. 
